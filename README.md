@@ -1,6 +1,6 @@
 # MyProjects
 
-MemoryGame- nie trzeba tłumaczyć :)
+MemoryGame - gra polegająca na znajdywaniu par takich samych kart (pokemon) z pełnym GUI
 
 NAI - projekty związane z machine learningiem
 
