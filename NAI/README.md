@@ -1,8 +1,8 @@
-## Spis Treœci
+## Spis TreÅ›ci
 + [Zadanie 1 - Linear classification](#zadanie-1---linear-classification)
 + [Zadanie 2 - Delta algorithm](#zadanie-2---delta-algorithm)
 
-Rozszerzenia poleceñ znajduj¹ siê w osobnych projektach.  
+Rozszerzenia poleceÅ„ znajdujÄ… siÄ™ w osobnych projektach.  
 
 
 ## Zadanie 1 - Linear classification
@@ -14,12 +14,12 @@ Rozszerzenia poleceñ znajduj¹ siê w osobnych projektach.
 
 ## Zadanie 2 - Delta algorithm
 
-Program wczytuje dane z plików tekstowych. Zak³adamy, ze:
-• Pierwszy argument programu to plik z danymi treningowymi, drugi z danymi testowymi.  
-• Trzeci argument programyu to atrybut decyzyjnt, który chcemy rozró¿niaæ od pozosta³ych.  
-• Atrybut decyzyjny znajduje siê w ostatniej kolumnie w plikach tekstowych.  
-• Wszystkie atrybuty poza decycyjnym s¹ numeryczne.  
-Nastêpnie algorytmem delty trenujemy perceptron, który rozró¿nia klasê podan¹ jako trzeci argument pozosta³ych klas (na danych treningowych).  
+Program wczytuje dane z plikÃ³w tekstowych. ZakÅ‚adamy, ze:  
+â€¢ Pierwszy argument programu to plik z danymi treningowymi, drugi z danymi testowymi.  
+â€¢ Trzeci argument programyu to atrybut decyzyjnt, ktÃ³ry chcemy rozrÃ³Å¼niaÄ‡ od pozostaÅ‚ych.  
+â€¢ Atrybut decyzyjny znajduje siÄ™ w ostatniej kolumnie w plikach tekstowych.  
+â€¢ Wszystkie atrybuty poza decycyjnym sÄ… numeryczne.  
+NastÄ™pnie algorytmem delty trenujemy perceptron, ktÃ³ry rozrÃ³Å¼nia klasÄ™ podanÄ… jako trzeci argument pozostaÅ‚ych klas (na danych treningowych).  
 Testujemy go potem na danych ze zbioru testowego.  
-Jako wynik wypisuje liczbê prawid³owo zaklasyfikowanych przyk³adów oraz dok³adnoœæ eksperymentu wyra¿on¹ w procentach.  
-Program umo¿liwia wielokrotne rêczne wpisanie wektora atrybutów i wypisuje dla takiego wektora czy nale¿y do danej klasy.  
+Jako wynik wypisuje liczbÄ™ prawidÅ‚owo zaklasyfikowanych przykÅ‚adÃ³w oraz dokÅ‚adnoÅ›Ä‡ eksperymentu wyraÅ¼onÄ… w procentach.  
+Program umoÅ¼liwia wielokrotne rÄ™czne wpisanie wektora atrybutÃ³w i wypisuje dla takiego wektora czy naleÅ¼y do danej klasy.  
