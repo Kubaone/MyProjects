@@ -1,4 +1,4 @@
-##Każy projekt posiada w swoim folderze dokumentację (jak i komentarze w kodzie), krótki opis:  
+## Każy projekt posiada w swoim folderze dokumentację (jak i komentarze w kodzie), krótki opis:  
   
 **VPN** -> Projekt wielowątkowy realizujący prosty tunel VPN, dzięki czemu dwaj użytkownicy mogą się komunikować między sobą poprzez niezależny serwer. Użytkownik może wybrac dwie klasy do komunikacji z serwerem (jedna działa na gniazdku UDP, a druga na TCP)  
   
