@@ -8,22 +8,22 @@ import java.nio.file.*;
 import java.nio.file.attribute.BasicFileAttributes;
 import java.util.ArrayList;
 import java.util.Collections;
+import java.util.List;
+import java.util.stream.Collectors;
 
 public class FileWalker {
     private static StringBuffer fileContent = new StringBuffer() ;
     private static ArrayList<SingleFile> fileTreeContent = new ArrayList<>();
     private static String properFileLanguage = "";
-    private static int languageCounter=0;
 
     public static ArrayList<SingleFile> processDir(String dirName) {
 
         try {
             Files.walkFileTree(Paths.get(dirName), new FileVisitor<Path>() {
                 @Override
-                public FileVisitResult preVisitDirectory(Path dir, BasicFileAttributes attrs) throws IOException {
+                public FileVisitResult preVisitDirectory(Path dir, BasicFileAttributes attrs) {
                     if(!dir.toAbsolutePath().toString().equals(dirName)) {
                         properFileLanguage = dir.getFileName().toString();
-                        languageCounter++;
                     }
                     return FileVisitResult.CONTINUE;
                 }
@@ -41,19 +41,19 @@ public class FileWalker {
                     while (cb.hasRemaining()){
                         fileContent.append(cb.get());
                     }
-                    fileTreeContent.add(new SingleFile(Process(fileContent.toString()),properFileLanguage));
+                    fileTreeContent.add(new SingleFile(countLetters(fileContent.toString()),properFileLanguage));
                     fileContent.setLength(0);
 
                     return FileVisitResult.CONTINUE;
                 }
 
                 @Override
-                public FileVisitResult visitFileFailed(Path file, IOException exc) throws IOException {
+                public FileVisitResult visitFileFailed(Path file, IOException exc) {
                     return FileVisitResult.CONTINUE;
                 }
 
                 @Override
-                public FileVisitResult postVisitDirectory(Path dir, IOException exc) throws IOException {
+                public FileVisitResult postVisitDirectory(Path dir, IOException exc) {
                     return FileVisitResult.CONTINUE;
                 }
             });
@@ -65,20 +65,26 @@ public class FileWalker {
         return fileTreeContent;
     }
 
-    public static ArrayList<Double> Process(String word){
+    //liczenie ilości wystąpień każdej z liter, zwrócenie Listy o długości alfabetu, indeks elementu odpowiada kolejności w alfabecie
+    //każda wartość jest proporcją
+    public static List<Double> countLetters(String word){
         final ArrayList<Double> parameters = new ArrayList<>(Collections.nCopies(26,0.0));
+        final long allChars =
+                word.toLowerCase()
+                .chars()
+                .filter(f-> f>='a' && f<='z').count();
+
             word.toLowerCase()
                     .chars()
-                    .filter(f-> f>96 && f<123)
+                    .filter(f-> f>='a' && f<='z')
                     .map(g->g-97)
                     .forEach(h->parameters.set(h,parameters.get(h)+1));
-            return parameters;
+
+            return  parameters.stream().map(param-> (param/allChars)).collect(Collectors.toList());
+
 
         }
 
-    public static int getLanguageCounter() {
-        return languageCounter;
-    }
 
 
 

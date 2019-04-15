@@ -1,12 +1,12 @@
-import java.util.ArrayList;
+import java.util.List;
 
 public class SingleFile {
 
-    private ArrayList<Double> fileContent;
+    private List<Double> parameters;
     private String properFileLanguage;
 
-    public SingleFile(ArrayList<Double> fileContent, String properFileLanguage) {
-        this.fileContent = fileContent;
+    public SingleFile(List<Double> fileContent, String properFileLanguage) {
+        this.parameters = fileContent;
         this.properFileLanguage = properFileLanguage;
     }
 
@@ -14,7 +14,7 @@ public class SingleFile {
         return properFileLanguage;
     }
 
-    public ArrayList<Double> getFileContent() {
-        return fileContent;
+    public List<Double> getParameters() {
+        return parameters;
     }
 }
