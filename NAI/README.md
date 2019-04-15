@@ -1,6 +1,7 @@
 ## Spis Treści
 + [Zadanie 1 - Linear classification](#zadanie-1---linear-classification)
 + [Zadanie 2 - Delta algorithm](#zadanie-2---delta-algorithm)
++ [Zadanie 3 - Jednowarstwowa sieć neuronowa rozpoznająca języki](#zadanie-3---Jednowarstwowa-sieć-neuronowa-rozpoznająca-języki)
 
 Rozszerzenia poleceń znajdują się w osobnych projektach.  
 
@@ -23,3 +24,12 @@ Następnie algorytmem delty trenujemy perceptron, który rozróżnia klasę poda
 Testujemy go potem na danych ze zbioru testowego.  
 Jako wynik wypisuje liczbę prawidłowo zaklasyfikowanych przykładów oraz dokładność eksperymentu wyrażoną w procentach.  
 Program umożliwia wielokrotne ręczne wpisanie wektora atrybutów i wypisuje dla takiego wektora czy należy do danej klasy.  
+
+
+## Zadanie 3 - Jednowarstwowa sieć neuronowa rozpoznająca języki
+
+Dane dzielimy na zbiór treningowy i testowy w proporcji 50-50.
+Wczytujemy pliki, usuwamy znaki „narodowe”, zliczamy częstości wystąpień znaków „a”-„z” (zakres od 0.0 do 1.0) i tworzymy dla każdego tekstu wektor częstości.
+Następnie algorytmem delty trenujemy perceptrony, które rozróżniają poszczególne języki. Zbudujemy z nich jednowarstwową sieć perceptronową.
+Testujemy ją potem na danych ze zbioru testowego. Wypisujemy macierz omyłek i miary jakości dla każdej klasy.
+Program musi umożliwiać wielokrotne wprowadzenie tekstu przykładowego i podanie dla takiego tekstu jego wynik klasyfikacji.
